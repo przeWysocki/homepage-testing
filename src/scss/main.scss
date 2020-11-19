@@ -1,13 +1,322 @@
+
 @import "~normalize.css";
 
 @import "_variables";
 @import "modules/hello.scss";
 
-body {
-  background: $wtf;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+$dancingFont: "Dancing Script", cursive;
+
+.about {
+  grid-area: about;
+  background-color: rgba(214, 159, 159, 0.5);
+  margin-top:80px;
+  }
+
+
+
+.bread-menu {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  outline: none;
+}
+
+.contact {
+  grid-area: contact;
+  background-color: rgba(214, 159, 159, 0.781);
+  &__fieldset {
+    margin: 24px auto 0 auto;
+    display: block;
+    text-align: center;
+    max-width: 600px;
+  }
+  &__heading {
+    margin-top: 70px;
+    text-align: center;
+    font-family: $dancingFont;
+    font-size: 28px;
+  }
+  &__input {
+    min-width: 220px;
+    min-height: 48px;
+    font-size: 18px;
+  }
+  &__legend {
+    font-family: $dancingFont;
+    font-size: 24px;
+  }
+}
+
+.fars {
+  font-size: 1.5rem;
+  position: fixed;
+  bottom: 36px;
+  right: 24px;
+}
+
+.fa {
+  color: black;
+}
+
+.firstName {
+  font-family: $dancingFont;
+  font-size:20px;
+}
+.header {
+  margin-bottom: 16px;
   min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 35px;
+  &__heading {
+    color: #000;
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    font-size: 80px;
+    margin: 0;
+    line-height: 1.1;
+    background-image: url(../assets/img/wypieki.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &__paragraph {
+    color: #000;
+    text-align: center;
+    margin: 0;
+    font-family: "Dancing Script", cursive;
+    font-size: 30px;
+  }
+}
+
+.header__navigation {
+  min-height: 80px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(20px);
+}
+
+.headings {
+  width:100%;
+  text-align: center;
+  font-size: 22px;
+  font-family: "Dancing Script", cursive;
+  margin: 10px 16px 0 16px;
+}
+ /* &::before {
+    width: 10px;
+    height: 10px;
+    border: 3px solid black;
+    border-radius: 50%;
+    display: inline-block;
+    content: "";
+    margin-right: 32px;
+  }
+  &::after {
+    width: 10px;
+    height: 10px;
+    border: 3px solid black;
+    border-radius: 50%;
+    display: inline-block;
+    content: "";
+    margin-left: 32px;
+  }*/
+
+.firstName {
+  display: block;
+}
+
+.footer {
+  background-color: #312402;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  min-height: 60px;
+}
+
+.jamchleb {
+  max-width:200px;
+  max-height:100px;
+  border-radius:16px;
+  border:3px solid rgba(0, 0, 0, 0.233);
+}
+
+.jamchleb:hover {
+    opacity: 75%;
+}
+
+.little-headings {
+  text-align: center;
+  margin: 8px;
+  font-size:16px;
+  font-weight:0;
+}
+
+.main {
+  font-family: "Lato", sans-serif;
+  padding-top:36px;
+  width: 100vw;
+  background-image: url(../assets/img/bakery.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.navigation {
+  padding: 16px;
+  display: none;
+  &__link {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 16px 0 16px 0;
+    font-size: 32px;
+    font-family: "Dancing Script", cursive;
+  }
+  &__link:hover {
+    color: #641c0ab9;
+    font-weight: bold;
+  }
+}
+
+.navigation--open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.recipes {
+  grid-area: recipes;
+}
+
+.section {
+  padding: 16px;
+  max-width: 70vw;
+  margin: 50px auto 0px auto;
+  max-height:100%;
+  border:5px solid rgba(0, 0, 0, 0.233);
+  border-radius:25px;
+  background-color: rgba(200, 171, 157, 0.253);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sourdough {
+  grid-area: sourdough;
+  margin-top:20px;
+}
+
+.special-font {
+  font-size: 18px;
+}
+.special-space {
+
+}
+
+
+.timer {
+  width:100px;
+  height:100px;
+  background-color: #b47777;
+  color:black;
+}
+
+.yourMessage {
+  &__textarea {
+    min-width: 260px;
+    min-height: 300px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .bread-menu {
+    display: none;
+  }
+  .header__heading {
+    font-size: 110px;
+  }
+  .header__paragraph {
+    font-size: 50px;
+  }
+  
+  .headings {
+  font-size: 33px;
+  }
+  .special-font {
+    font-size: 24px;
+  }
+
+  .fars {
+    position: fixed;
+    font-size: 2rem;
+  }
+
+  .jamchleb:hover {
+    opacity: 75%;
+}
+  .main {
+    grid-template-rows: 100vh 64px 100vh 64px 100vh 64px 150vh;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &__link {
+      padding: 0 16px 0 16px;
+    }
+  }
+
+  .dashed {
+    border-bottom: 6px dotted #b47777;
+    position: sticky;
+    top: 80px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__heading {
+    font-size: 150px;
+  }
+  .header__paragraph {
+    font-size: 65px;
+  }
+  .fars {
+    font-size: 2.5rem;
+  }
+  .main {
+    grid-template-rows: 100vh 64px 100vh 64px 100vh 64px 130vh;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header__heading {
+    font-size: 170px;
+  }
+  .header__paragraph {
+    font-size: 80px;
+  }
+  .fars {
+    font-size: 3rem;
+  }
 }
