@@ -152,10 +152,12 @@ $dancingFont: "Dancing Script", cursive;
 }
 
 .jamchleb {
-  max-width:200px;
-  max-height:100px;
+  max-width:220px;
+  max-height:110px;
   border-radius:16px;
   border:3px solid rgba(0, 0, 0, 0.233);
+  transition-delay: 1;
+  transform: matrix3d();
 }
 
 .jamchleb:hover {
@@ -172,7 +174,7 @@ $dancingFont: "Dancing Script", cursive;
 .main {
   font-family: "Lato", sans-serif;
   padding-top:36px;
-  width: 100vw;
+  width: 100%;
   background-image: url(../assets/img/bakery.jpg);
   background-position: center;
   background-size: cover;
@@ -209,15 +211,17 @@ $dancingFont: "Dancing Script", cursive;
 
 .section {
   padding: 16px;
-  max-width: 70vw;
+  max-width: 85%;
   margin: 50px auto 0px auto;
   max-height:100%;
-  border:5px solid rgba(0, 0, 0, 0.233);
+
   border-radius:25px;
   background-color: rgba(200, 171, 157, 0.253);
   display:flex;
   flex-direction: column;
   align-items: center;
+  text-align:center;
+ 
 }
 
 .sourdough {
