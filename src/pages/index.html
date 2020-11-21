@@ -16,14 +16,14 @@
     <body id="top">
         <header class="header__navigation">
             <button class="bread-menu bread-menu--js" aria-label="Otwórz menu">
-                <img src="../assets/img/mini-bread.png">
+                <img class="bread__photo bread-photo--js" src="../assets/img/mini-bread.png" alt="Grafika z chlebem">
             </button>
             <nav class="navigation navigation--js">
                 <a class="navigation__link" href="index.html">Home</a>
-                <a class="navigation__link" href="#about">Wtf?</a>
-                <a class="navigation__link" href="#sourdough">Zakwas</a>
-                <a class="navigation__link" href="#recipes">Menu</a>
-                <a class="navigation__link" href="#contact">Kontakt</a>
+                <a class="navigation__link navigation__link--js" href="#about">O co chodzi?</a>
+                <a class="navigation__link navigation__link--js" href="#beginners">Dla początkujących</a>
+                <a class="navigation__link navigation__link--js" href="#recipes">Menu</a>
+                <a class="navigation__link navigation__link--js" href="#contact">Kontakt</a>
             </nav>
         </header>
         <header class="header">
@@ -41,55 +41,42 @@
                     Fajnie, że to czytasz.  
                     Chciałbym przekazać Ci coś bardzo ważnego dla mnie. 
                 </p>
-                <div class="my-photo"><img class="jamchleb" src="../assets/img/jamchleb.jpg"></div>
+                <img class="jamchleb" src="../assets/img/jamchleb.jpg">
                 <p>
-                    Przez ostatnie lata zgłębiałem tajniki pieczenia chleba, eksperymentując z miarami, 
-                    składnikami, formami, czasem wyrastania i pieczenia. 
-<div></div>
-
-
-                    Strona, na której jesteś powstała, by podzielić się z Tobą moją wiedzą i doświadczeniem. 
+                    Z zawodu nie jestem piekarzem, jednak przez ostatnie lata zgłębiałem tajniki pieczenia chleba, 
+                    eksperymentując z miarami, składnikami, formami, czasem wyrastania i pieczenia.   
+                </p>
+                <img class="bread__middle" src="../assets/img/bread-middle.png" alt="Grafika z chlebem">
+                <p>
+                    Strona na której jesteś powstała, by podzielić się z Tobą moją wiedzą i doświadczeniem. 
                     Znajdziesz na niej przepis na zakwas żytni i chleb żytni oraz zakwas pszenny i chleb pszenny, 
                     a także kilka innych przepisów na chleby mieszane, orkiszowe lub z użyciem mąki gryczanej.
-                    Wszytko ze znanych Tobie, zdrowych składników, bez drożdży. 
-                    Tylko mąka, woda, sól oraz odrobina tłuszczu do smarowania formy. 
-                    
-                    Pragnę byś mogła/mógł tak jak ja cieszyć się przygotowaniem i codziennym jedzeniem własnego chleba. 
-                    
-    
                 </p>
-                
-                    <p>
-                    Aktualny czas to <span class="timer timer--js"></span>
-                    </p>
-                </article>
-                <article class="about__article">
-                    <h3 class="about__article-heading little-headings">
-                        Moja krótka historia
-                    </h3>
-                    <p class="about__description">
-                        Taki sobie człowiek. Żyje i oddycham. Jeśli na serio interesuje
-              Cie to, kim jestem, to możesz poczytać.
-                    </p>
-                </article>
+                <img class="bread__middle" src="../assets/img/bread-middle.png" alt="Grafika z chlebem">
+                <p>
+                    Wszytko wykonasz ze znanych Tobie, zdrowych składników, bez drożdży. 
+                    Tylko mąka, woda, sól oraz odrobina tłuszczu do smarowania formy.
+                    Pragnę byś mogła/mógł tak jak ja cieszyć się przygotowaniem i codziennym jedzeniem własnego chleba. 
+                    Zaczynajmy!
+                </p>
             </section>
-            <div class="clown" id="sourdough"></div>
-            <section class="sourdough section" >
-                <h2 class="sourdough__heading headings">
+
+            <section class="beginners section" id="beginners" >
+                <h2 class="beginners__heading headings">
                     Co nieco o zakwasie
                 </h2>
-                <article class="sourdough__article">
-                    <h3 class="sourdough__article-heading little-headings">
+                <article class="beginners__article">
+                    <h3 class="beginners__article-heading little-headings">
                         Zakwas faza 1
                     </h3>
-                    <p class="sourdough__description">
+                    <p class="beginners__description">
                         W tym tygodniu raczej nie dużo się dzieje, ale zobacze jak dużo
               nauki było już w trzecim tygodniu
                     </p>
-                    <h3 class="sourdough__article-heading little-headings">
+                    <h3 class="beginners__article-heading little-headings">
                         Zakwas faza 2
                     </h3>
-                    <p class="sourdough__description">
+                    <p class="beginners__description">
                         W tym tygodniu raczej nie dużo się dzieje, ale zobacze jak dużo
               nauki było już w trzecim tygodniu
                     </p>
@@ -122,7 +109,7 @@
             <section class="contact section" id="contact">
                 <h2 class="contact__heading">Masz pytania? <br> Chcesz podzielić się swoją historią? <br> Skontaktuj się ze mną:</h2>
                 <fieldset class="contact__fieldset">
-                    <legend class="contact__legend">Kontakt</legend>
+                    <legend class="contact__legend"></legend>
                     <p>
                         <label for="firstName"class="firstName">
                             Twoje imię<br>

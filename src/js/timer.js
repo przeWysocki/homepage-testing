@@ -1,5 +1,5 @@
-import moment from 'moment';
+/*import moment from 'moment';
 
 const startOfDay = moment().format('LLL');
 const timePlaceholder = document.querySelector('.timer--js');
-timePlaceholder.innerHTML = startOfDay;
+timePlaceholder.innerHTML = startOfDay;*/

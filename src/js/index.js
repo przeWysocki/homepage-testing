@@ -11,9 +11,6 @@ console.log(`Witaj w konsoli, nazywam się ${names} i mam ${ages} lat`);
 
 
 
-
-
-
 function greet (age, firstName) {
  console.log (`Cześć nazywam się ${firstName} i mam ${age} lat`);
 }

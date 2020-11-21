@@ -27,12 +27,41 @@ $dancingFont: "Dancing Script", cursive;
 
 .bread-menu {
   position: absolute;
-  top: 10px;
+  top: 5px;
   right: 10px;
   border: none;
   background-color: rgba(255, 255, 255, 0);
   cursor: pointer;
   outline: none;
+}
+
+.bread-menu--circle {
+  transform: rotate(360deg);
+  transition-duration: 1s;
+
+}
+
+/*@keyframes bread-circle {
+  from { 
+    transform: rotate(0deg); 
+} to { 
+    transform: rotate(360deg);
+}
+.bread-menu:hover {
+  transform: rotate(390deg);
+  transition-duration: 1s;
+}
+
+.bread-menu:active {
+  transform: rotate(390deg);
+  transition-duration: 1s;
+}*/
+
+
+.bread__photo {
+  width:64px;
+  height:64px;
+
 }
 
 .contact {
@@ -43,6 +72,7 @@ $dancingFont: "Dancing Script", cursive;
     display: block;
     text-align: center;
     max-width: 600px;
+    border:none;
   }
   &__heading {
     margin-top: 70px;
@@ -106,11 +136,14 @@ $dancingFont: "Dancing Script", cursive;
 }
 
 .header__navigation {
-  min-height: 80px;
+  min-height: 60px;
   position: fixed;
   top: 0;
   width: 100%;
   backdrop-filter: blur(20px);
+  display:flex;
+  align-items: center;
+  justify-content:center;
 }
 
 .headings {
@@ -156,8 +189,7 @@ $dancingFont: "Dancing Script", cursive;
   max-height:110px;
   border-radius:16px;
   border:3px solid rgba(0, 0, 0, 0.233);
-  transition-delay: 1;
-  transform: matrix3d();
+  
 }
 
 .jamchleb:hover {
@@ -183,6 +215,7 @@ $dancingFont: "Dancing Script", cursive;
 .navigation {
   padding: 16px;
   display: none;
+  color:#5e4534;
   &__link {
     display: block;
     color: #000;
@@ -224,8 +257,8 @@ $dancingFont: "Dancing Script", cursive;
  
 }
 
-.sourdough {
-  grid-area: sourdough;
+.beginners {
+  grid-area: beginners;
   margin-top:20px;
 }
 
@@ -277,9 +310,11 @@ $dancingFont: "Dancing Script", cursive;
   .jamchleb:hover {
     opacity: 75%;
 }
-  .main {
-    grid-template-rows: 100vh 64px 100vh 64px 100vh 64px 150vh;
-  }
+
+
+.main {
+  grid-template-rows: 100vh 64px 100vh 64px 100vh 64px 150vh;
+}
 
   .navigation {
     display: flex;
@@ -292,9 +327,9 @@ $dancingFont: "Dancing Script", cursive;
   }
 
   .dashed {
-    border-bottom: 6px dotted #b47777;
+    border-bottom: 4px dotted #b47777;
     position: sticky;
-    top: 80px;
+    top: 70px;
   }
 }
 
