@@ -14,4 +14,5 @@ circle.classList.toggle('bread-menu--circle');
 const closeMenu = document.querySelector('.navigation--js');
 closeMenu.addEventListener('click',()=> {
     closeMenu.classList.remove('navigation--open');
+    circle.classList.add('bread-menu--circle');
 })

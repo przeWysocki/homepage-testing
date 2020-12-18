@@ -15,7 +15,11 @@ html {
   box-sizing: inherit;
 }
 
-$dancingFont: "Dancing Script", cursive;
+
+:root {
+  --opacity-zero:0;
+  --opacity-full:100%;
+}
 
 .about {
   grid-area: about;
@@ -37,7 +41,7 @@ $dancingFont: "Dancing Script", cursive;
 
 .bread-menu--circle {
   transform: rotate(360deg);
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 
 }
 
@@ -61,8 +65,33 @@ $dancingFont: "Dancing Script", cursive;
 .bread__photo {
   width:64px;
   height:64px;
-
 }
+
+.bread-cutscene {
+  min-width:100%;
+  height:auto;  
+  display:inline-block;
+  overflow: hidden;
+  opacity:0;
+}
+
+@keyframes breadAppears {
+  0%   { opacity: 0.1; }
+  100% { opacity: 1; }
+}
+
+.bread-cutscene__img {
+  width:64px;
+  height:auto;
+} 
+
+.bread-cutscene__img--js {
+animation-name: breadAppears;
+animation-iteration-count: 1;
+animation-duration: 3s;
+opacity:1;
+}
+
 
 .contact {
   grid-area: contact;
@@ -144,6 +173,7 @@ $dancingFont: "Dancing Script", cursive;
   display:flex;
   align-items: center;
   justify-content:center;
+  z-index:100;
 }
 
 .headings {
@@ -185,12 +215,21 @@ $dancingFont: "Dancing Script", cursive;
 }
 
 .jamchleb {
-  max-width:220px;
-  max-height:110px;
-  border-radius:16px;
-  border:3px solid rgba(0, 0, 0, 0.233);
-  
+  display: inline-block;
+  min-width:100%;
+  overflow: hidden;
+  z-index:0;
 }
+
+.jamchleb__photo {
+  width:100%;
+  transition: transform 5s;
+}
+
+.jamchleb--js {
+  transform: scale(1.5);
+}
+
 
 .jamchleb:hover {
     opacity: 75%;
@@ -216,6 +255,7 @@ $dancingFont: "Dancing Script", cursive;
   padding: 16px;
   display: none;
   color:#5e4534;
+  
   &__link {
     display: block;
     color: #000;
@@ -235,6 +275,7 @@ $dancingFont: "Dancing Script", cursive;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index:100;
 }
 
 
@@ -243,10 +284,10 @@ $dancingFont: "Dancing Script", cursive;
 }
 
 .section {
-  padding: 16px;
-  max-width: 85%;
+  padding: 16px 0 16px 0;
+  max-width: 85vw;
   margin: 50px auto 0px auto;
-  max-height:100%;
+  
 
   border-radius:25px;
   background-color: rgba(200, 171, 157, 0.253);
@@ -254,7 +295,7 @@ $dancingFont: "Dancing Script", cursive;
   flex-direction: column;
   align-items: center;
   text-align:center;
- 
+
 }
 
 .beginners {

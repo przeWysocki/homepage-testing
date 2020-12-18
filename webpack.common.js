@@ -9,6 +9,8 @@ module.exports = {
     breadButton: "./src/js/bread-button.js",
     kupa: "./src/js/kupa.js",
     timer:"./src/js/timer.js",
+    zoom:"./src/js/zoom-image.js",
+    breadAnimation: "./src/js/bread-animation.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -82,7 +84,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/pages/index.html",
       inject: true,
-      chunks: ["index", "breadButton","kupa", "timer"], 
+      chunks: ["index", "breadButton","kupa", "timer", "zoom", "breadAnimation", ], 
       filename: "index.html",
     }),
     new HtmlWebpackPlugin({
